@@ -1,0 +1,36 @@
+===================docker commands============
+
+1.docker pull jenkins
+2.docker pull jenkins:2.60.3
+3.docker pull tomcat
+
+docker images running container
+------------------------------------
+4.docker run -d -p 30001:8080 jenkins
+5.docker run -d -p 30001:8080 jenkins:2.60.3
+
+6.docker run -d -p 30002:8080 nginx
+7.docker run --name tomcat -d -p 30003:8080 tomcat
+
+
+
+        connect to the container
+-------------------------------------------------
+      docker exec -it container id
+
+1.    docker exec -it 63fb55bd7639 bash
+
+
+        container port
+-----------------------------------------
+docker port container id
+
+1. docker port 263222c2edb9
+
+
+      container logs
+------------------------------------
+
+docker logs container id
+
+1.docker logs 263222c2edb9
